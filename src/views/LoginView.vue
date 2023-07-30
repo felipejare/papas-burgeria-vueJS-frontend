@@ -24,6 +24,7 @@ input{
     height: 100px;
     align-items: center;
     justify-content: center;
+    border-radius: 10px;
 
 
 }
