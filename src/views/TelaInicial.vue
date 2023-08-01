@@ -5,10 +5,10 @@
     <div class="navbar">
         <div class="logo">logo foda</div>
         <div class="botoes"><button>Comandas ativas!</button></div>
-        <div class="botoes"><button>Pedidos Cozinha</button></div>
-        <div class="botoes"><button>Histórico de compras</button></div>
+        <div class="botoes"><button>lankes</button></div>
+        <div class="botoes"><button>lucro</button></div>
         <input type="text" name="" id="" placeholder="pesquisar">
-        <RouterLink to="/" >Logout</RouterLink>
+        <RouterLink to="/" ><button class="botoes">Logout</button></RouterLink>
     </div>
     <div class="container">
         <div class="divCenter">
@@ -21,9 +21,28 @@
 </template>
 <style scoped>
 
+.botoes button a:hover{
+  background-color: transparent;
+  color: #22e9ce;
+}
+
+ .botoes button{
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 7px 20px !important;
+  border-radius: 5px;
+  margin: 0px 0px 0px 20px;
+  background-color: #c21e1e;
+  border: 3px solid #c21e1e;
+  border-radius: 5px;
+}
+.botoes button a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .navbar{
-    width: 1920px;
-    height: 100px;
+    width: 100%;
+    height: 80px;
     align-items: center;
     display: flex;
 }
@@ -39,12 +58,12 @@
 }
 .container{
     background-color: white;
-    width: 1920px;
-    height: 830px;
+    width: 100%;
+    height: 100%;
     
 }
 .divCenter{
-    width: 1768px;
+    width: 1468px;
     height: 724px;
     justify-content: center;
     flex-direction: row;
