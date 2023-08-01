@@ -1,8 +1,117 @@
-<script setup>
-</script>
+<script setup></script>
 
 <template>
-  <main>
-    <h1>micao viado</h1>
+  <main class="container">
+    <body>
+      <div class="content">
+        <div class="divCenter">
+          <h1 class="bemvindo">Login</h1>
+          <input type="text" placeholder="Usuário" name="" id="">
+          <input type="password" placeholder="Senha" name="" id="">
+          <button class="button-64" role="button"><span class="text">Entrar</span></button>
+        
+        </div>
+      </div>
+    </body>
+    
   </main>
 </template>
+
+<style scoped>
+
+
+.divCenter{
+  background-color: transparent;
+  width: 400px;
+  height: 300px;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 360px;
+  text-align: center;
+  color: white;
+  box-shadow: -3px -3px 9px #aaa9a9a2,
+              3px 3px 7px rgba(147, 149, 151, 0.671);
+ 
+
+}
+
+.divCenter text {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 35px;
+  color: rgb(247, 233, 233);
+}
+
+
+
+.divCenter input{
+  display: flex;
+  margin-left: 110px;
+  margin-bottom: 10px;
+  width: 170px;
+  height: 40px;
+  
+
+}
+
+
+
+
+
+/* CSS */
+.button-64 {
+  margin: auto;
+  margin-top: 40px;
+  align-items: center;
+  background-image: linear-gradient(144deg,#d51b2a, #791121 50%,#940e3f);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(215, 29, 29, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button-64:active,
+.button-64:hover {
+  outline: 0;
+}
+
+.button-64 span {
+  background-color: #891f1f;
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button-64:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .button-64 {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+
+
+
+</style>

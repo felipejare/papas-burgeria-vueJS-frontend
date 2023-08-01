@@ -1,16 +1,22 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-
 </script>
 
 <template>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/login">Entrar</RouterLink>
+<body>
     
-  <RouterView />
+  <div class="container">
+    <RouterView />
+  </div>
+
+</body>
+
 </template>
 
-<style scoped>
+<style>
+body{
+  margin: 0px;
+  background-color: #DE2B2B;
+}
+
 
 </style>
