@@ -5,7 +5,7 @@ import { RouterLink } from 'vue-router';
 </script>
 <template>
     <div class="navbar">
-        <div class="logo">logo foda</div>
+        <RouterLink to="/login"><div class="logo">logo foda</div></RouterLink>
         <RouterLink to="/login" ><div class="botoes"><button>Inicio</button></div></RouterLink>
         <div class="botoes"><button>Comandas ativas!</button></div>
         <div class="botoes"><button>lankes</button></div>
@@ -16,14 +16,14 @@ import { RouterLink } from 'vue-router';
     <div class="container">
         <div class="divCenter">
 
-            saas
+            aq tem lucros eim
         </div>
 
 
     </div>
 </template>
-<style scoped>
 
+<style>
 .botoes button a:hover{
   background-color: transparent;
   color: #22e9ce;
@@ -48,6 +48,7 @@ import { RouterLink } from 'vue-router';
     height: 80px;
     align-items: center;
     display: flex;
+    background-color: #DE2B2B;
 }
 .navbar button{
     margin-left: 3vh;
@@ -57,6 +58,7 @@ import { RouterLink } from 'vue-router';
     margin-left: 60vh;
     height: 30px;
     width: 500px;
+   
 
 }
 .container{
@@ -73,6 +75,10 @@ import { RouterLink } from 'vue-router';
     align-items: center;
     margin: 0 auto;
     background-color: #ECECEC;
+}
+
+.logo{
+    text-decoration: underline;
 }
 
 </style>
