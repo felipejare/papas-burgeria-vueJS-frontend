@@ -1,18 +1,21 @@
-<script>
+<script setup>
+import NavBar from '@/components/NavBar.vue';
 import { RouterLink } from 'vue-router';
 
 
 </script>
 <template>
-    <div class="navbar">
+    <NavBar />
+    <!-- <div class="navbar">
         <RouterLink to="/login"><div class="logo">logo foda</div></RouterLink>
         <RouterLink to="/login" ><div class="botoes"><button>Inicio</button></div></RouterLink>
         <div class="botoes"><button>Comandas ativas!</button></div>
         <div class="botoes"><button>lankes</button></div>
         <RouterLink to="/lucro" ><div class="botoes"><button>Lucro</button></div></RouterLink>
         <input type="text" name="" id="" placeholder="pesquisar">
+        <RouterLink to="/perfil"><div class="perfil"></div></RouterLink>
         <RouterLink to="/" ><button class="botoes">Logout</button></RouterLink>
-    </div>
+    </div> -->
     <div class="container">
         <div class="divCenter">
 
@@ -29,7 +32,14 @@ import { RouterLink } from 'vue-router';
   color: #22e9ce;
 }
 
- .botoes button{
+.perfil{
+    background-color: blue;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.botoes button{
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 7px 20px !important;
   border-radius: 5px;

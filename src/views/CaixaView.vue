@@ -1,17 +1,31 @@
 <script setup>
 import NavBar from '../components/NavBar.vue'
-import { RouterLink } from 'vue-router'
 </script>
+
 <template>
-  <NavBar />
-  <div class="container">
-    <div class="divCenter">aq tem o inicio eim</div>
-  </div>
+    <NavBar />
+
+    <div class="container">
+        <div class="divCenter">
+
+            aq tem o caixa eim
+        </div>
+
+
+    </div>
+
 </template>
-<style scoped>
+<style>
 .botoes button a:hover {
   background-color: transparent;
   color: #22e9ce;
+}
+
+.perfil {
+  background-color: blue;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .botoes button {
@@ -33,6 +47,7 @@ import { RouterLink } from 'vue-router'
   height: 80px;
   align-items: center;
   display: flex;
+  background-color: #de2b2b;
 }
 .navbar button {
   margin-left: 3vh;
@@ -56,5 +71,9 @@ import { RouterLink } from 'vue-router'
   align-items: center;
   margin: 0 auto;
   background-color: #ececec;
+}
+
+.logo {
+  text-decoration: underline;
 }
 </style>
