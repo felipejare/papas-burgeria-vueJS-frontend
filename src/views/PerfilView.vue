@@ -1,11 +1,16 @@
 <script setup>
 import NavBar from '../components/NavBar.vue'
+import PerfilCard from '../components/PerfilCard.vue';
+import BlockComidas from '../components/BlockComidas.vue'
 import { RouterLink } from 'vue-router'
 </script>
 <template>
   <NavBar />
   <div class="container">
-    <div class="divCenter">aq tem perfil eim?</div>
+    <div class="divCenter"><PerfilCard />
+    <BlockComidas />
+    
+    </div>
   </div>
 </template>
 
@@ -36,6 +41,7 @@ import { RouterLink } from 'vue-router'
   color: #fff;
 }
 
+
 .navbar {
   width: 100%;
   height: 80px;
@@ -64,7 +70,7 @@ import { RouterLink } from 'vue-router'
   flex-direction: row;
   align-items: center;
   margin: 0 auto;
-  background-color: #ececec;
+  background-color: #ffffff;
 }
 
 .logo {
