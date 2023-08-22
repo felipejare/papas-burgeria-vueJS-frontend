@@ -1,14 +1,16 @@
 <script setup>
 import FotoComida from '../components/FotoComida.vue'
+
 </script>
 
 <template>
-
+    
     <div class="block">
         <FotoComida />
         <FotoComida />
         <FotoComida />
         <FotoComida />
+        
 
     </div>
 

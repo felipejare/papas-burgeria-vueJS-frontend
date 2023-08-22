@@ -6,16 +6,6 @@ import { RouterLink } from 'vue-router';
 </script>
 <template>
     <NavBar />
-    <!-- <div class="navbar">
-        <RouterLink to="/login"><div class="logo">logo foda</div></RouterLink>
-        <RouterLink to="/login" ><div class="botoes"><button>Inicio</button></div></RouterLink>
-        <div class="botoes"><button>Comandas ativas!</button></div>
-        <div class="botoes"><button>lankes</button></div>
-        <RouterLink to="/lucro" ><div class="botoes"><button>Lucro</button></div></RouterLink>
-        <input type="text" name="" id="" placeholder="pesquisar">
-        <RouterLink to="/perfil"><div class="perfil"></div></RouterLink>
-        <RouterLink to="/" ><button class="botoes">Logout</button></RouterLink>
-    </div> -->
     <div class="container">
         <div class="divCenter">
 
@@ -60,17 +50,7 @@ import { RouterLink } from 'vue-router';
     display: flex;
     background-color: #DE2B2B;
 }
-.navbar button{
-    margin-left: 3vh;
-}
-.navbar input{
-    margin-right: 20vh;
-    margin-left: 60vh;
-    height: 30px;
-    width: 500px;
-   
 
-}
 .container{
     background-color: white;
     width: 100%;
@@ -84,7 +64,7 @@ import { RouterLink } from 'vue-router';
     flex-direction: row;
     align-items: center;
     margin: 0 auto;
-    background-color: #ECECEC;
+    background-color: #ececec;
 }
 
 .logo{
