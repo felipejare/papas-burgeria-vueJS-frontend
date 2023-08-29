@@ -4,8 +4,8 @@
 
     <div class="bloquinho">
         
-    <div class="cupom1">conteudo</div>
-    <div class="cupom2">conteudo</div>
+    <div class="cupom1">coupons </div>
+    <div class="cupom2">coupons</div>
 
     </div>
 

@@ -7,8 +7,26 @@ import NavBar from '../components/NavBar.vue'
 
     <div class="container">
         <div class="divCenter">
+          <table>
+        <thead>
+          <tr class="contents">
+            <th class="idezinho">ID da comanda</th>
+            <th class="tituloe">Nome cliente</th>
+            <th class="editorae">Pedidos</th>
+            <th class="precoe">Valor</th>
+          </tr>
+        </thead>
 
-            aq tem o caixa eim
+        <tbody>
+          <tr v-for="comanda in comandas" :key="comanda.id">
+            <td class="idezinhod" >{{ comanda.id }}</td>
+            <td class="titulod">{{ cliente.nome }}</td>
+            <td class="editorad">{{ cliente.pedido }}</td>
+            <td class="precod">{{ cliente.valor }}</td>
+          </tr>
+        </tbody>
+      </table>
+            
         </div>
 
 
@@ -75,5 +93,39 @@ import NavBar from '../components/NavBar.vue'
 
 .logo {
   text-decoration: underline;
+}
+table {
+  width: 100%;
+  margin: 2% auto;
+  border-collapse: collapse;
+}
+
+table tr th {
+  border: 1px solid #c21e1e;
+  padding: 10px;
+}
+
+table tr td {
+  border: 1px solid #de2b2b;
+}
+
+table tr:nth-child(odd) {
+  background-color: #de2b2b;
+}
+
+select{
+  width: 60%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+td{
+  width: 50%;
+}
+
+th{
+  width: 40%;
 }
 </style>

@@ -3,7 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import TelaInicial from '../views/TelaInicial.vue'
 import LucroView from '../views/LucroView.vue'
 import PerfilView from '../views/PerfilView.vue'
-import CaixaView from '../views/PerfilView.vue'
+import CaixaView from '../views/CaixaView.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [

@@ -6,12 +6,14 @@
     <div class="bloquinho">
 
         <div class="fotinhas">
-            <p>conteudo</p>
+            <p>comidas</p>
 
         </div>
         <div class="fotinhas2">
-            <p>conteudo</p>
+            <p>comida</p>
         </div>
+
+        
 
     </div>
 

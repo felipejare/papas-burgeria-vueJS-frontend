@@ -1,7 +1,9 @@
 <script setup>
 import NavBar from '@/components/NavBar.vue';
 import { RouterLink } from 'vue-router';
-
+import Vue from 'vue';
+import { ZdECharts } from '@zeedhi/zd-echarts'; 
+Vue.component('ZdECharts', ZdECharts);
 
 </script>
 <template>

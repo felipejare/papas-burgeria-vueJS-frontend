@@ -1,26 +1,23 @@
 <script setup>
 import NavBar from '../components/NavBar.vue'
-import PerfilCard from '../components/PerfilCard.vue';
+import PerfilCard from '../components/PerfilCard.vue'
 import BlockComidas from '../components/BlockComidas.vue'
-import BlockCupons from '../components/BlockCupons.vue'
 import { RouterLink } from 'vue-router'
 </script>
 <template>
   <NavBar />
   <div class="container">
-
-  <BlockComidas />
-
-  <BlockCupons />
     <div class="divCenter">
-    <PerfilCard />
+      <PerfilCard />
+
+      <div class="conteudos">
+        <BlockComidas />
+      </div>
     </div>
-    
   </div>
 </template>
 
 <style>
-
 .perfil {
   background-color: blue;
   width: 40px;
@@ -41,5 +38,7 @@ import { RouterLink } from 'vue-router'
   margin: 0 auto;
   background-color: #ffffff;
 }
-
+.conteudos{
+  
+}
 </style>

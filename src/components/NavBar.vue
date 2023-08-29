@@ -1,4 +1,6 @@
 <script>
+import { RouterLink } from 'vue-router';
+
 
 </script>
 
@@ -8,7 +10,7 @@
         <RouterLink to="/login"><div class="logo">logo foda</div></RouterLink>
         <RouterLink to="/login" ><div class="botoes"><button>Inicio</button></div></RouterLink>
         <div class="botoes"><button>Comandas ativas!</button></div>
-        <div class="botoes"><button>lankes</button></div>
+        <RouterLink to="/caixa"><div class="botoes"><button>caixa!!</button></div></RouterLink>
         <RouterLink to="/lucro" ><div class="botoes"><button>Lucro</button></div></RouterLink>
         <input type="text" name="" id="" placeholder="pesquisar">
         <RouterLink to="/perfil"><div class="perfil"></div></RouterLink>
