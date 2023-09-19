@@ -1,13 +1,38 @@
 <script setup>
+import { ref, onMounted } from 'vue'
+import PencilIcon from 'vue-material-design-icons/Pencil.vue'
+import DeleteIcon from 'vue-material-design-icons/Delete.vue'
 import NavBar from '../components/NavBar.vue'
+
+import comandaService from '@/services/comandas.js'
+
+const comandas = ref([])
+const currentComanda = ref({
+  name: ''
+})
+
+onMounted(async () => {
+  const data = await comandaService.getAllComandas()
+  comandas.value = data
+})
+
+async function deleteComanda(comanda) {
+  await comandaService.deleteComanda(comanda)
+  const data = await comandaService.getAllComandas()
+  comanda.value = data
+}
+
+function editComanda(comanda) {
+  currentComanda.value = { ...comanda }
+}
 </script>
 
 <template>
-    <NavBar />
+  <NavBar />
 
-    <div class="container">
-        <div class="divCenter">
-          <table>
+  <div class="container">
+    <div class="divCenter">
+      <table>
         <thead>
           <tr class="contents">
             <th class="idezinho">ID da comanda</th>
@@ -19,19 +44,19 @@ import NavBar from '../components/NavBar.vue'
 
         <tbody>
           <tr v-for="comanda in comandas" :key="comanda.id">
-            <td class="idezinhod" >{{ comanda.id }}</td>
+            <td class="idezinhod">{{ comanda.id }}</td>
             <td class="titulod">{{ cliente.nome }}</td>
             <td class="editorad">{{ cliente.pedido }}</td>
             <td class="precod">{{ cliente.valor }}</td>
+            <td>
+              <DeleteIcon @click="deleteGenre(genre)" />
+              <PencilIcon @click="editGenre(genre)" />
+            </td>
           </tr>
         </tbody>
       </table>
-            
-        </div>
-
-
     </div>
-
+  </div>
 </template>
 <style>
 .botoes button a:hover {
@@ -113,7 +138,7 @@ table tr:nth-child(odd) {
   background-color: #de2b2b;
 }
 
-select{
+select {
   width: 60%;
   height: 40px;
   border: 1px solid #ccc;
@@ -121,11 +146,11 @@ select{
   padding: 0 10px;
 }
 
-td{
+td {
   width: 50%;
 }
 
-th{
+th {
   width: 40%;
 }
 </style>
