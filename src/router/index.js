@@ -4,6 +4,7 @@ import TelaInicial from '../views/TelaInicial.vue'
 import LucroView from '../views/LucroView.vue'
 import PerfilView from '../views/PerfilView.vue'
 import CaixaView from '../views/CaixaView.vue'
+import EstoqueView from '../views/EstoqView.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -39,6 +40,11 @@ const router = createRouter({
       path: '/caixa',
       name: 'caixa',
       component: CaixaView
+    },
+    {
+      path: '/estoque',
+      name: 'estoque',
+      component: EstoqueView
     }
   ]
 })

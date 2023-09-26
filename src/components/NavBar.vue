@@ -9,7 +9,7 @@ import { RouterLink } from 'vue-router';
     <div class="navbar">
         <RouterLink to="/login"><div class="logo">logo foda</div></RouterLink>
         <RouterLink to="/login" ><div class="botoes"><button>Inicio</button></div></RouterLink>
-        <div class="botoes"><button>Estoque</button></div>
+        <RouterLink to="/estoque"><div class="botoes"><button>Estoque</button></div></RouterLink>
         <RouterLink to="/caixa"><div class="botoes"><button>caixa!!</button></div></RouterLink>
         <RouterLink to="/lucro" ><div class="botoes"><button>Lucro</button></div></RouterLink>
         <input type="text" name="" id="" placeholder="pesquisar">
@@ -81,5 +81,32 @@ import { RouterLink } from 'vue-router';
 
 .logo{
     text-decoration: underline;
+}
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
 }
 </style>
