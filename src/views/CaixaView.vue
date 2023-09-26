@@ -1,10 +1,9 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-import PencilIcon from 'vue-material-design-icons/Pencil.vue'
-import DeleteIcon from 'vue-material-design-icons/Delete.vue'
 import NavBar from '../components/NavBar.vue'
 
 import comandaService from '@/services/comandas.js'
+
 
 const comandas = ref([])
 const currentComanda = ref({
@@ -35,22 +34,22 @@ function editComanda(comanda) {
       <table>
         <thead>
           <tr class="contents">
-            <th class="idezinho">ID da comanda</th>
+            <th class="idezinho">Pedido</th>
             <th class="tituloe">Nome cliente</th>
-            <th class="editorae">Pedidos</th>
+            <th class="editorae">ID</th>
             <th class="precoe">Valor</th>
           </tr>
         </thead>
 
         <tbody>
           <tr v-for="comanda in comandas" :key="comanda.id">
+            <td class="editorad">{{ comanda.itens }}</td>
+            <td class="titulod">{{ comanda.usuario }}</td>
             <td class="idezinhod">{{ comanda.id }}</td>
-            <td class="titulod">{{ cliente.nome }}</td>
-            <td class="editorad">{{ cliente.pedido }}</td>
-            <td class="precod">{{ cliente.valor }}</td>
+            <td class="precod">{{ comanda.preco }}</td>
             <td>
-              <DeleteIcon @click="deleteGenre(genre)" />
-              <PencilIcon @click="editGenre(genre)" />
+              <button @click="deleteComanda(comanda)">deletar</button>
+              <button @click="editComanda(comanda)">editar</button>
             </td>
           </tr>
         </tbody>

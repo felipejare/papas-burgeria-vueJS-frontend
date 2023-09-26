@@ -9,7 +9,7 @@ import { RouterLink } from 'vue-router';
     <div class="navbar">
         <RouterLink to="/login"><div class="logo">logo foda</div></RouterLink>
         <RouterLink to="/login" ><div class="botoes"><button>Inicio</button></div></RouterLink>
-        <div class="botoes"><button>Comandas ativas!</button></div>
+        <div class="botoes"><button>Estoque</button></div>
         <RouterLink to="/caixa"><div class="botoes"><button>caixa!!</button></div></RouterLink>
         <RouterLink to="/lucro" ><div class="botoes"><button>Lucro</button></div></RouterLink>
         <input type="text" name="" id="" placeholder="pesquisar">
