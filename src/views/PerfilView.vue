@@ -11,7 +11,6 @@ import { RouterLink } from 'vue-router'
       <PerfilCard />
 
       <div class="conteudos">
-        <BlockComidas />
       </div>
     </div>
   </div>

@@ -1,15 +1,25 @@
 <script setup>
+import { ref, onMounted } from 'vue'
 import FotoComida from '../components/FotoComida.vue'
+
+import ingredienteService from '@/services/estoques.js'
+
+const ingredientes = ref([])
+
+
+onMounted(async () => {
+  const data = await ingredienteService.getAllIngredientes()
+  ingredientes.value = data
+})
+
+
+// const ingredientes = ref([])
 </script>
 
 <template>
-  <div class="contido">
-    <div class="block">
-      <FotoComida />
-      <FotoComida />
-      <FotoComida />
-      <FotoComida />
-    </div>
+
+<div class="contido">  
+      <FotoComida v-for="ingrediente in ingredientes" :key="ingrediente.id" :ingrediente=ingrediente />      
   </div>
 </template>
 

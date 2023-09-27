@@ -24,6 +24,8 @@ async function deleteComanda(comanda) {
 function editComanda(comanda) {
   currentComanda.value = { ...comanda }
 }
+
+
 </script>
 
 <template>
@@ -42,7 +44,7 @@ function editComanda(comanda) {
         </thead>
 
         <tbody>
-          <tr v-for="comanda in comandas" :key="comanda.id">
+          <tr v-for="comanda in comandas" :key="comanda.id" :comanda=comanda>
             <td class="editorad">{{ comanda.itens }}</td>
             <td class="titulod">{{ comanda.usuario }}</td>
             <td class="idezinhod">{{ comanda.id }}</td>

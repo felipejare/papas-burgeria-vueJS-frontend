@@ -1,11 +1,17 @@
 <script setup>
 import NavBar from '../components/NavBar.vue'
+import BlockEstoq from '../components/BlockEstoq.vue'
 import { RouterLink } from 'vue-router'
 </script>
 <template>
     <NavBar />
     <div class="container">
-      <div class="divCenter">aq tem stoq</div>
+      <div class="divCenter">
+        <h1>Gerenciamento de Estoque</h1>
+        <div class="botoes "><button>deletar</button> <button>adicionar</button> <button>editar</button> </div>
+        <hr>
+        <BlockEstoq />
+      </div>
     </div>
   </template>
   <style scoped>
@@ -13,6 +19,7 @@ import { RouterLink } from 'vue-router'
     background-color: white;
     width: 100%;
     height: 100%;
+    display: flex;
   }
   .divCenter {
     width: 1468px;
