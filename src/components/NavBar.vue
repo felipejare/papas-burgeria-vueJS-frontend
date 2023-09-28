@@ -1,112 +1,128 @@
-<script>
-import { RouterLink } from 'vue-router';
-
-
-</script>
-
+<script></script>
 
 <template>
-    <div class="navbar">
-        <RouterLink to="/login"><div class="logo">logo foda</div></RouterLink>
-        <RouterLink to="/login" ><div class="botoes"><button>Inicio</button></div></RouterLink>
-        <RouterLink to="/estoque"><div class="botoes"><button>Estoque</button></div></RouterLink>
-        <RouterLink to="/caixa"><div class="botoes"><button>caixa!!</button></div></RouterLink>
-        <RouterLink to="/lucro" ><div class="botoes"><button>Lucro</button></div></RouterLink>
-        <input type="text" name="" id="" placeholder="pesquisar">
-        <RouterLink to="/perfil"><div class="perfil"></div></RouterLink>
-        <RouterLink to="/" ><button class="botoes">Logout</button></RouterLink>
+  <div class="navbar">
+    <RouterLink to="/login"
+      ><img src="../components/icons/436873f8-a55a-4359-b418-b824d59bed64.png" alt=""
+    /></RouterLink>
+    <RouterLink to="/login"><button class="botoes">Inicio</button></RouterLink>
+    <RouterLink to="/estoque"><button class="botoes">Estoque</button></RouterLink>
+    <RouterLink to="/caixa"><button class="botoes">caixa!!</button></RouterLink>
+    <RouterLink to="/lucro"><button class="botoes">Lucro</button></RouterLink>
+    <div class="search-box">
+      <button class="btn-search"><i class="fas fa-search"></i></button>
+      <input type="text" class="input-search" placeholder="Type to Search..." />
     </div>
+
+    <RouterLink to="/perfil"><div class="perfil"></div></RouterLink>
+    <RouterLink to="/"><button class="botoes">Logout</button></RouterLink>
+  </div>
 </template>
 
-<style>
-.botoes button a:hover{
-  background-color: transparent;
-  color: #22e9ce;
+<style scoped>
+.perfil {
+  background-color: blue;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
-.perfil{
-    background-color: blue;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
-.botoes button{
+/*.botoes {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 7px 20px !important;
   border-radius: 5px;
   margin: 0px 0px 0px 20px;
-  background-color: #c21e1e;
-  border: 3px solid #c21e1e;
+  background-color: #ff7b7b;
   border-radius: 5px;
-}
-.botoes button a {
-  text-decoration: none;
-  color: #fff;
-}
+}*/
 
-.navbar{
-    width: 100%;
-    height: 80px;
-    align-items: center;
-    display: flex;
-    background-color: #DE2B2B;
-}
-.navbar button{
-    margin-left: 3vh;
-}
-.navbar input{
-    margin-right: 20vh;
-    margin-left: 60vh;
-    height: 30px;
-    width: 500px;
-   
-
-}
-.container{
-    background-color: white;
-    width: 100%;
-    height: 100%;
-    
-}
-.divCenter{
-    width: 1468px;
-    height: 724px;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-    margin: 0 auto;
-    background-color: #ECECEC;
-}
-
-.logo{
-    text-decoration: underline;
-}
-
-.topnav {
-  background-color: #333;
-  overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: #04AA6D;
+.botoes {
+  background-color: transparent;
+  border: 3px blue;
   color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
 }
+
+img {
+  height: 50px;
+}
+
+.botoes:hover {
+  background-color: rgb(124, 2, 2);
+}
+
+.navbar {
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  display: flex;
+  background-color: #de2b2b;
+}
+
+.navbar input {
+  margin-right: 20vh;
+  margin-left: 60vh;
+  height: 30px;
+  width: 500px;
+}
+.logo {
+  text-decoration: none;
+}
+
+/*Search Bar */
+
+/*.input-search{
+  height: 25px;
+  width: 25px;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all .5s ease-in-out;
+  background-color: #22a6b3;
+  padding-right: 10px;
+  color:#fff;
+}
+.input-search::placeholder{
+  color:rgba(255,255,255,.5);
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 10;
+}
+.btn-search{
+  width: 25px;
+  height: 25px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  color:#ffffff ;
+  background-color:transparent;
+  pointer-events: painted;  
+}
+.btn-search:focus ~ .input-search{
+  width: 50px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:1px solid rgba(255,255,255,.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+.input-search:focus{
+  width: 100px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:1px solid rgba(255,255,255,.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+*/
 </style>

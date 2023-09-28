@@ -1,8 +1,6 @@
 <script setup>
 import NavBar from '../components/NavBar.vue'
 import PerfilCard from '../components/PerfilCard.vue'
-import BlockComidas from '../components/BlockComidas.vue'
-import { RouterLink } from 'vue-router'
 </script>
 <template>
   <NavBar />
@@ -16,7 +14,7 @@ import { RouterLink } from 'vue-router'
   </div>
 </template>
 
-<style>
+<style scoped>
 .perfil {
   background-color: blue;
   width: 40px;
@@ -37,7 +35,5 @@ import { RouterLink } from 'vue-router'
   margin: 0 auto;
   background-color: #ffffff;
 }
-.conteudos{
-  
-}
+
 </style>
