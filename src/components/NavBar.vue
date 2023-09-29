@@ -1,4 +1,5 @@
-<script></script>
+<script>
+</script>
 
 <template>
   <div class="navbar">
@@ -7,13 +8,11 @@
     /></RouterLink>
     <RouterLink to="/login"><button class="botoes">Inicio</button></RouterLink>
     <RouterLink to="/estoque"><button class="botoes">Estoque</button></RouterLink>
-    <RouterLink to="/caixa"><button class="botoes">caixa!!</button></RouterLink>
+    <RouterLink to="/caixa"><button class="botoes">Caixa!!</button></RouterLink>
     <RouterLink to="/lucro"><button class="botoes">Lucro</button></RouterLink>
     <div class="search-box">
-      <button class="btn-search"><i class="fas fa-search"></i></button>
-      <input type="text" class="input-search" placeholder="Type to Search..." />
+      <input type="text" class="input-search" placeholder="Pesquisar..." />
     </div>
-
     <RouterLink to="/perfil"><div class="perfil"></div></RouterLink>
     <RouterLink to="/"><button class="botoes">Logout</button></RouterLink>
   </div>
@@ -63,66 +62,26 @@ img {
   background-color: #de2b2b;
 }
 
-.navbar input {
+/* .navbar input {
   margin-right: 20vh;
   margin-left: 60vh;
   height: 30px;
-  width: 500px;
-}
-.logo {
-  text-decoration: none;
-}
+  width: 40px;
+} */
 
 /*Search Bar */
 
-/*.input-search{
-  height: 25px;
-  width: 25px;
-  border-style: none;
-  padding: 10px;
-  font-size: 18px;
-  letter-spacing: 2px;
-  outline: none;
-  border-radius: 25px;
-  transition: all .5s ease-in-out;
-  background-color: #22a6b3;
-  padding-right: 10px;
-  color:#fff;
-}
-.input-search::placeholder{
-  color:rgba(255,255,255,.5);
-  font-size: 14px;
-  letter-spacing: 1px;
-  font-weight: 10;
-}
-.btn-search{
-  width: 25px;
-  height: 25px;
-  border-style: none;
+.navbar input {
+  margin-right: 20vh;
+  margin-left: 60vh;
+  color: white;
+  height: 36px;
+  width: 360px;
   font-size: 20px;
-  font-weight: bold;
-  outline: none;
-  cursor: pointer;
-  border-radius: 50%;
-  position: absolute;
-  right: 0px;
-  color:#ffffff ;
-  background-color:transparent;
-  pointer-events: painted;  
-}
-.btn-search:focus ~ .input-search{
-  width: 50px;
-  border-radius: 0px;
+  border-radius: 30px;
   background-color: transparent;
-  border-bottom:1px solid rgba(255,255,255,.5);
-  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  box-shadow: -1.5px -1.5px 3px #ffffffa2,
+               1px 1px 3px rgba(255, 255, 255, 0.671);
 }
-.input-search:focus{
-  width: 100px;
-  border-radius: 0px;
-  background-color: transparent;
-  border-bottom:1px solid rgba(255,255,255,.5);
-  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
-}
-*/
+
 </style>
