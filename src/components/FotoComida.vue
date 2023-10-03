@@ -11,6 +11,8 @@ const props = defineProps({
             <p>{{props.ingrediente.nome}}</p>
             <p>{{props.ingrediente.preco}}</p>
             <p>{{props.ingrediente.descricao}}</p>
+            <img src="ingrediente.images[0].url" alt="">
+
 
         </div>
         
