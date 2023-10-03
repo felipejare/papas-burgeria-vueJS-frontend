@@ -7,10 +7,11 @@ import { RouterLink } from 'vue-router'
   <NavBar />
   <div class="container">
     <div class="divCenter">
-      <h2>Bem vindo fulano de tal Pronto para o trabalho? c:</h2>
+      <h2>Bem vindo fulano de tal | Pronto para o trabalho? c: </h2>
       <CalendarioBlock />
-      <button class="button-64" role="button"><span class="text">Ir para Caixa -></span></button>
-      <button class="button-64" role="button"><span class="text">Ir para Estoque -></span></button>
+      <button class="button-64" role="button"><span class="text">Ir para Lucros  =></span></button>
+      <button class="button-64" role="button"><span class="text">Ir para Caixa  =></span></button>
+      <button class="button-64" role="button"><span class="text">Ir para Estoque =></span></button>
 
 
     </div>
@@ -34,7 +35,6 @@ import { RouterLink } from 'vue-router'
 .button-64 {
   margin: auto;
   margin-top: 40px;
-  align-items: center;
   background-image: linear-gradient(144deg,#d51b2a, #791121 50%,#940e3f);
   border: 0;
   border-radius: 8px;
@@ -44,7 +44,6 @@ import { RouterLink } from 'vue-router'
   display: flex;
   font-family: Phantomsans, sans-serif;
   font-size: 20px;
-  justify-content: center;
   line-height: 1em;
   max-width: 100%;
   min-width: 140px;
