@@ -79,7 +79,7 @@ img {
   width: 360px;
   font-size: 20px;
   border-radius: 30px;
-  background-color: transparent;
+  background-color: white;
   box-shadow: -1.5px -1.5px 3px #ffffffa2,
                1px 1px 3px rgba(255, 255, 255, 0.671);
 }

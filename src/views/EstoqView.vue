@@ -23,7 +23,7 @@ import { RouterLink } from 'vue-router'
   }
   .divCenter {
     width: 1468px;
-    height: 724px;
+    height: 800px;
     justify-content: center;
     flex-direction: row;
     align-items: center;
