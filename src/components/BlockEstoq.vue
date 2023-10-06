@@ -23,7 +23,7 @@ onMounted(async () => {
   </div>
 </template>
 
-<style>
+<style scoped>
 .block {
   height: 300px;
   width: 400px;
@@ -34,5 +34,6 @@ onMounted(async () => {
 
 .contido{
     display: flex;
+    overflow-y: scroll;
 }
 </style>

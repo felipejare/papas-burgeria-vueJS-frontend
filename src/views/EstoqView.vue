@@ -20,15 +20,17 @@ import { RouterLink } from 'vue-router'
     width: 100%;
     height: 100%;
     display: flex;
+
+
   }
   .divCenter {
     width: 1468px;
     height: 800px;
     justify-content: center;
-    flex-direction: row;
     align-items: center;
     margin: 0 auto;
     background-color: #ececec;
+
   }
   </style>
   
