@@ -10,9 +10,6 @@
     <RouterLink to="/estoque"><button class="botoes">Estoque</button></RouterLink>
     <RouterLink to="/caixa"><button class="botoes">Caixa!!</button></RouterLink>
     <RouterLink to="/lucro"><button class="botoes">Lucro</button></RouterLink>
-    <div class="search-box">
-      <input type="text" class="input-search" placeholder="Pesquisar..." />
-    </div>
     <RouterLink to="/perfil"><div class="perfil"></div></RouterLink>
     <RouterLink to="/"><button class="botoes">Logout</button></RouterLink>
   </div>
@@ -24,6 +21,8 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
+
+  margin-left: 100vh;
 }
 
 /*.botoes {
