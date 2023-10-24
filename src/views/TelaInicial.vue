@@ -9,9 +9,9 @@ import { RouterLink } from 'vue-router'
     <div class="divCenter">
       <h2>Bem vindo fulano de tal | Pronto para o trabalho? c: </h2>
       <CalendarioBlock />
-      <button class="button-64" role="button"><span class="text">Ir para Lucros  =></span></button>
-      <button class="button-64" role="button"><span class="text">Ir para Caixa  =></span></button>
-      <button class="button-64" role="button"><span class="text">Ir para Estoque =></span></button>
+      <button class="button-64" role="button"><span class="text">Ir para Lucros  -></span></button>
+      <button class="button-64" role="button"><span class="text">Ir para Caixa  -></span></button>
+      <button class="button-64" role="button"><span class="text">Ir para Estoque -></span></button>
 
 
     </div>

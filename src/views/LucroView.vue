@@ -7,7 +7,7 @@ import NavBar from '@/components/NavBar.vue';
     <NavBar />
     <div class="container">
         <div class="divCenter">
-            aq tem lucros eim
+            aq tem lucros eim (area de testes!)
         </div>
 
 

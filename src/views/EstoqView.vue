@@ -9,6 +9,7 @@ import { RouterLink } from 'vue-router'
       <div class="divCenter">
         <h1>Gerenciamento de Estoque</h1>
         <div class="botoes "><button>deletar</button> <button>adicionar</button> <button>editar</button> </div>
+        <div><input placeholder="Ingredientes" type="text"><input placeholder="Preço" type="text"><input placeholder="Descrição" type="text"></div>
         <hr>
         <BlockEstoq />
       </div>

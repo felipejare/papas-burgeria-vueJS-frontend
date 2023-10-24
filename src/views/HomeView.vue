@@ -7,22 +7,7 @@ import { RouterLink, RouterView } from 'vue-router';
 <template>
   <main class="container">
     <body>
-      <!-- <div class="content">
-        <div class="divCenter">
-          <h1 class="bemvindo">Login</h1>
-          <div class=”field”>
-            <span class="fa fa-user"></span>
-            <input type=”text” placeholder="Email Id" required>
-            </div>
-            <div class=”field”>
-                <span class="fa fa-lock"></span>
-                <input type=”password” placeholder=Password>
-            </div>
 
-          <button class="button-64" role="button"><span class="text">Entrar</span></button>
-        
-        </div>
-      </div> -->
                 <div class="loginBox">
             <h2>Entrar!</h2>
             <form>
