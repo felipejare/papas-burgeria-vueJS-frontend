@@ -7,22 +7,6 @@ import { RouterLink, RouterView } from 'vue-router';
 <template>
   <main class="container">
     <body>
-      <!-- <div class="content">
-        <div class="divCenter">
-          <h1 class="bemvindo">Login</h1>
-          <div class=”field”>
-            <span class="fa fa-user"></span>
-            <input type=”text” placeholder="Email Id" required>
-            </div>
-            <div class=”field”>
-                <span class="fa fa-lock"></span>
-                <input type=”password” placeholder=Password>
-            </div>
-
-          <button class="button-64" role="button"><span class="text">Entrar</span></button>
-        
-        </div>
-      </div> -->
                 <div class="loginBox">
             <h2>Cadastre-se</h2>
             <form>
@@ -43,51 +27,6 @@ import { RouterLink, RouterView } from 'vue-router';
 </template>
 
 <style scoped>
-
-
-/* .divCenter{
-  background-color: transparent;
-  width: 400px;
-  height: 300px;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-  margin: 0 auto;
-  margin-top: 360px;
-  text-align: center;
-  color: white;
-  box-shadow: -3px -3px 9px #aaa9a9a2,
-               3px 3px 7px rgba(147, 149, 151, 0.671);
- 
-
-} */
-
-
-
-/* .divCenter text {
-  font-size: 25px;
-  font-weight: 600;
-  margin-bottom: 35px;
-  color: rgb(247, 233, 233);
-} */
-
-
-
-/* .divCenter input{
-  display: flex;
-  margin-left: 110px;
-  margin-bottom: 10px;
-  width: 170px;
-  height: 40px;
-  
-
-} */
-
-
-
-
-
-/* CSS */
 .button-64 {
   margin: auto;
   margin-top: 40px;
