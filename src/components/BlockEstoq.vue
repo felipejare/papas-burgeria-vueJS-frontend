@@ -35,5 +35,6 @@ onMounted(async () => {
 .contido{
     display: flex;
     overflow-y: scroll;
+    flex-wrap: wrap;
 }
 </style>

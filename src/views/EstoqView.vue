@@ -17,7 +17,7 @@ import { RouterLink } from 'vue-router'
   <style scoped>
   .container {
     background-color: white;
-    width: 100%;
+    min-width: 100%;
     height: 100%;
     display: flex;
 

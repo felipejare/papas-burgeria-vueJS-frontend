@@ -1,6 +1,5 @@
 <script setup>
-import { defineProps } from 'vue';
-import { ref, onMounted } from 'vue'
+import { ref, defineProps } from 'vue'
 
 const props = defineProps({
   ingrediente: Object,
@@ -14,10 +13,10 @@ import ingredienteService from '@/services/estoques.js'
     name: ''
   })
 
-  onMounted(async () => {
-    const data = await ingredienteService.getAllIngredientes()
-    ingredientes.value = data
-  })
+  // onMounted(async () => {
+  //   const data = await ingredienteService.getAllIngredientes()
+  //   ingredientes.value = data
+  // })
 
   async function deleteIngredientes(ingrediente) {
     await ingredienteService.deleteIngrediente(ingrediente)
@@ -36,11 +35,11 @@ import ingredienteService from '@/services/estoques.js'
 
 <template>
     <div class="container">
-      <div class="fotinhas" v-for="ingrediente in ingredientes" :key="ingrediente.id">
-        <input type="text" v-model="ingrediente.nome">
-        <input type="text" v-model="ingrediente.preco">
-        <input type="text" v-model="ingrediente.descricao">
-        <button @click="deleteIngredientes(ingrediente)">editar</button> <button @click="editIngrediente(ingrediente)">deletar</button>
+      <div class="fotinhas">
+        <input type="text" v-model="(props.ingrediente.nome)">
+        <input type="text" v-model="(props.ingrediente.preco)">
+        <input type="text" v-model="(props.ingrediente.descricao)">
+        <button @click="deleteIngredientes(props.ingrediente)">editar</button> <button @click="deleteIngredientes(props.ingrediente)">deletar</button>
         <!-- <p>{{ props.ingrediente.nome }}</p>
         <p>{{ props.ingrediente.preco }}</p>
         <p>{{ props.ingrediente.descricao }}</p>
@@ -52,6 +51,10 @@ import ingredienteService from '@/services/estoques.js'
   
 
   <style scoped>
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
   .fotinhas {
     margin: 30px;
     width: 400px;
