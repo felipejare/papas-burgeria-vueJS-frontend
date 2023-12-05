@@ -40,7 +40,7 @@ import ingredienteService from '@/services/estoques.js'
         <input type="text" v-model="(props.ingrediente.nome)">
         <input type="text" v-model="(props.ingrediente.descricao)">
         <input type="text" v-model="(props.ingrediente.preco)">
-        <button @click="deleteIngredientes(props.ingrediente)"><span class="type">editar</span></button> <button @click="deleteIngredientes(props.ingrediente)"><span type="text">deletar</span></button>
+        <button @click="deleteIngredientes(props.ingrediente)"><span class="type">Editar</span></button> <button @click="deleteIngredientes(props.ingrediente)"><span type="text">Deletar</span></button>
         <!-- <p>{{ props.ingrediente.nome }}</p>
         <p>{{ props.ingrediente.preco }}</p>
         <p>{{ props.ingrediente.descricao }}</p>

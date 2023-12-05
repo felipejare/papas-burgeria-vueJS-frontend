@@ -25,68 +25,18 @@ async function save() {
     <div class="container">
       <div class="divCenter">
         <h1>Gerenciamento de Estoque</h1>
-        <div><button class="AddButton" @click="showForm = true">Adicionar</button></div>
+        <input type="text" placeholder="Ingrediente" v-model="(currentIngrediente.nome)" > <input type="text" placeholder="Descrição" v-model="(currentIngrediente.descricao)"><input type="number" placeholder="Preço" v-model="(currentIngrediente.preco)">  <div class="AddInputs"><button class="AddButton" @click="save">Adicionar</button>
+        </div>
         <hr>
-        <modal :visible="showForm" @close="showForm = false">
-          <template #header>
-      <h3>Cadastro de filme</h3>
-    </template>
-    <template #body>
-      <form class="form">
-        <div class="row">
-          <div id="preview">
-            <input type="file" @change="onFileChange" />
-            <div class="cover">
-              <img v-if="coverUrl" :src="coverUrl" />
-            </div>
-          </div>
-        </div>
-        <div class="form-item">
-          <input type="text" placeholder="Título" id="title" v-model="currentMovie.title" />
-          <label for="title">Título</label>
-        </div>
-        <div class="form-item">
-          <input
-            type="text"
-            placeholder="Ano de lançamento"
-            id="year"
-            v-model="currentMovie.year"
-          />
-          <label for="year">Ano de lançamento</label>
-        </div>
-        <div class="form-item">
-          <select v-model="currentMovie.genre">
-            <option disabled value="">Selecione um gênero</option>
-            <option v-for="genre in genres" :key="genre.id" :value="genre.id">
-              {{ genre.name }}
-            </option>
-          </select>
-          <label for="year">Gênero</label>
-        </div>
-        <div class="form-item">
-          <select v-model="currentMovie.rating">
-            <option disabled value="">Rating</option>
-            <option v-for="n in [0, 1, 2, 3, 4, 5]" :key="n" :value="n">
-              {{ n }}
-            </option>
-          </select>
-          <label for="year">Rating</label>
-        </div>
-      </form>
-    </template>
-    <template #footer>
-      <div class="footerButtons">
-        <button @click="showForm = false">Cancelar</button>
-        <button class="saveButton" @click="save">Salvar</button>
-      </div>
-    </template>
-        </modal>
         <BlockEstoq />
       </div>
     </div>
   </template>
   <style scoped>
-  .container {
+ 
+ 
+ 
+ .container {
     background-color: white;
     min-width: 100%;
     height: 100%;
@@ -103,5 +53,41 @@ async function save() {
     background-color: #ececec;
 
   }
-  </style>
+
+.AddInputs button{
+  width: 10%;
+  height: 6%;
+  background-image: linear-gradient(144deg,#d51b2a, #791121 50%,#940e3f);
+  border-radius: 20px;
+  color: white;
+  box-shadow: rgba(215, 29, 29, 0.2) 0 15px 30px -5px;
+  text-decoration: none;
+  user-select: none;
+  margin-left: 30px;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  border: none;
+}
+.AddInputs:hover button, span {
+  background-color: #891f1f;
+  transition: 300ms;
+}
+
+.AddInputs button, span {
+  background: rgb(189, 28, 0) ;
+}
+
+.divCenter input{
+  margin-left: 2%;
+  width: 10%;
+  margin-left: 30px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+}
+
+</style>
   

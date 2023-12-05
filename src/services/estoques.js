@@ -5,7 +5,7 @@ class ingredienteService {
         const response = await api.get('/ingredientes/')
         return response.data
     }
-    async saveIngredientes(ingrediente) {
+    async saveIngrediente(ingrediente) {
         let response
         if (ingrediente.id) {
             response = await api.put(`/ingredientes/${ingrediente.id}/`, ingrediente)
@@ -15,7 +15,7 @@ class ingredienteService {
         return response.data
     }
 
-    async deleteIngredientes(ingrediente){
+    async deleteIngrediente(ingrediente){
         const response = await api.delete(`/ingredientes/${ingrediente.id}/`)
         return response.data
     }
