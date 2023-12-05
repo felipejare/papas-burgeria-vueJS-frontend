@@ -5,6 +5,7 @@ import BlockEstoq from '../components/BlockEstoq.vue'
 import { RouterLink } from 'vue-router'
 import Modal from '@/components/template/Modal.vue'
 
+import bebidaService from '../services/bebidas'
 import ingredienteService from '@/services/estoques.js'
 
 const currentIngrediente = reactive({
@@ -29,6 +30,8 @@ async function save() {
         </div>
         <hr>
         <BlockEstoq />
+        <hr>
+        <h2>Bebidas</h2>
       </div>
     </div>
   </template>
@@ -46,7 +49,7 @@ async function save() {
   }
   .divCenter {
     width: 1468px;
-    height: 800px;
+    height: 100%;
     justify-content: center;
     align-items: center;
     margin: 0 auto;

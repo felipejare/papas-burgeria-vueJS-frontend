@@ -18,7 +18,7 @@ import ingredienteService from '@/services/estoques.js'
   //   ingredientes.value = data
   // })
 
-  async function deleteIngredientes(ingrediente) {
+  async function deleteIngrediente(ingrediente) {
     await ingredienteService.deleteIngrediente(ingrediente)
     const data = await ingredienteService.getAllIngredientes()
     ingredientes.value = data
@@ -40,13 +40,8 @@ import ingredienteService from '@/services/estoques.js'
         <input type="text" v-model="(props.ingrediente.nome)">
         <input type="text" v-model="(props.ingrediente.descricao)">
         <input type="text" v-model="(props.ingrediente.preco)">
-        <button @click="deleteIngredientes(props.ingrediente)"><span class="type">Editar</span></button> <button @click="deleteIngredientes(props.ingrediente)"><span type="text">Deletar</span></button>
-        <!-- <p>{{ props.ingrediente.nome }}</p>
-        <p>{{ props.ingrediente.preco }}</p>
-        <p>{{ props.ingrediente.descricao }}</p>
-        <p><strong>quero a foto aq</strong></p>
-        <img v-if="props.ingrediente.images && props.ingrediente.images.length > 0" :src="props.ingrediente.images[0].url" alt="" width="350" height="350"> -->
-      </div>
+        <button @click="editIngrediente(currentIngrediente)"><span class="type">Editar</span></button> <button @click="deleteIngrediente(props.ingrediente)"><span type="text">Deletar</span></button>
+        </div>
     </div>
   </template>
   
