@@ -2,8 +2,8 @@
 import NavBar from '../components/NavBar.vue'
 import { ref, reactive, onMounted } from 'vue'
 import BlockEstoq from '../components/BlockEstoq.vue'
+import BlockbEstoq from '../components/BlockbEstoq.vue'
 import { RouterLink } from 'vue-router'
-import Modal from '@/components/template/Modal.vue'
 
 import bebidaService from '../services/bebidas'
 import ingredienteService from '@/services/estoques.js'
@@ -13,11 +13,19 @@ const currentIngrediente = reactive({
   preco:'',
   descricao:'',
 })
+const currentBebida = reactive({
+  nome:'',
+  preco:'',
+  descricao:'',
+})
 
 async function save() {
   await ingredienteService.saveIngrediente(currentIngrediente)
+  await bebidaService.saveBebida(currentBebida)
+  Object.assign(currentBebida)
   Object.assign(currentIngrediente)
 }
+
 
 
 </script>
@@ -26,12 +34,14 @@ async function save() {
     <div class="container">
       <div class="divCenter">
         <h1>Gerenciamento de Estoque</h1>
-        <input type="text" placeholder="Ingrediente" v-model="(currentIngrediente.nome)" > <input type="text" placeholder="Descrição" v-model="(currentIngrediente.descricao)"><input type="number" placeholder="Preço" v-model="(currentIngrediente.preco)">  <div class="AddInputs"><button class="AddButton" @click="save">Adicionar</button>
-        </div>
+        <input type="text" placeholder="Ingrediente" v-model="(currentIngrediente.nome)" > <input type="text" placeholder="Descrição" v-model="(currentIngrediente.descricao)"><input type="number" placeholder="Preço" v-model="(currentIngrediente.preco)">  <div class="AddInputs"><button class="AddButton" @click="save">Adicionar</button></div>
         <hr>
         <BlockEstoq />
         <hr>
         <h2>Bebidas</h2>
+        <input type="text" placeholder="Bebida" v-model="(currentBebida.nome)" > <input type="text" placeholder="Descrição" v-model="(currentBebida.tipo)"><input type="number" placeholder="Preço" v-model="(currentBebida.preco)"> <input type="text" placeholder="Nulo" v-model="(currentBebida.descricao)">  <div class="AddInputs"><button class="AddButton" @click="save">Adicionar</button></div>
+        <hr>
+        <BlockbEstoq />
       </div>
     </div>
   </template>

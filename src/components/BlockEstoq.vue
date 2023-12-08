@@ -7,19 +7,18 @@ import ingredienteService from '@/services/estoques.js'
 const ingredientes = ref([])
 
 
+
 onMounted(async () => {
   const data = await ingredienteService.getAllIngredientes()
   ingredientes.value = data
 })
 
-
-// const ingredientes = ref([])
 </script>
 
 <template>
 
 <div class="contido">  
-      <FotoComida v-for="ingrediente in ingredientes" :key="ingrediente.id" :ingrediente=ingrediente />      
+      <FotoComida v-for="ingrediente in ingredientes" :key="ingrediente.id" :ingrediente=ingrediente />
   </div>
 </template>
 
