@@ -3,11 +3,13 @@ import NavBar from '../components/NavBar.vue'
 import { ref, reactive, onMounted } from 'vue'
 import BlockEstoq from '../components/BlockEstoq.vue'
 import BlockbEstoq from '../components/BlockbEstoq.vue'
+import BlockhEstoq from '../components/BlockhEstoq.vue'
 import { RouterLink } from 'vue-router'
 
 import bebidaService from '../services/bebidas'
 import ingredienteService from '@/services/estoques.js'
 import imageService from '../services/images.js'
+import burgerService from '../services/burger.js'
 
 const coverUrl = ref('')
 const file = ref(null)
@@ -21,6 +23,7 @@ const currentBebida = reactive({
   preco:'',
   descricao:'',
 })
+
 
 function onFileChange(e) {
   file.value = e.target.files[0]
@@ -50,6 +53,11 @@ async function save() {
         <input type="text" placeholder="Bebida" v-model="(currentBebida.nome)" > <input type="text" placeholder="Descrição" v-model="(currentBebida.tipo)"><input type="number" placeholder="Preço" v-model="(currentBebida.preco)"> <input type="text" placeholder="Nulo" v-model="(currentBebida.descricao)">  <div class="AddInputs"><button class="AddButton" @click="save">Adicionar</button></div>
         <hr>
         <BlockbEstoq />
+        <hr>
+        <h2>Hamburgueres</h2>
+        <input type="text" placeholder="Bebida" v-model="(currentBebida.nome)" > <input type="text" placeholder="Descrição" v-model="(currentBebida.tipo)"><input type="number" placeholder="Preço" v-model="(currentBebida.preco)"> <input type="text" placeholder="Nulo" v-model="(currentBebida.descricao)">  <div class="AddInputs"><button class="AddButton" @click="save">Adicionar</button></div>
+        <hr>
+        <BlockhEstoq />
       </div>
     </div>
   </template>
