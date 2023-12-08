@@ -7,7 +7,10 @@ import { RouterLink } from 'vue-router'
 
 import bebidaService from '../services/bebidas'
 import ingredienteService from '@/services/estoques.js'
+import imageService from '../services/images.js'
 
+const coverUrl = ref('')
+const file = ref(null)
 const currentIngrediente = reactive({
   nome:'',
   preco:'',
@@ -18,6 +21,11 @@ const currentBebida = reactive({
   preco:'',
   descricao:'',
 })
+
+function onFileChange(e) {
+  file.value = e.target.files[0]
+  coverUrl.value = URL.createObjectURL(file.value)
+}
 
 async function save() {
   await ingredienteService.saveIngrediente(currentIngrediente)

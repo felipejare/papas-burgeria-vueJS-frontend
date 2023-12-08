@@ -7,7 +7,8 @@ const props = defineProps({
 
 import ingredienteService from '@/services/estoques.js'
 
-
+  const coverUrl = ref('')
+  const file = ref(null)
   const ingredientes = ref([])
   const currentIngrediente = ref({
     name: ''
@@ -28,6 +29,11 @@ import ingredienteService from '@/services/estoques.js'
     currentIngrediente.value = { ...ingrediente }
   }
 
+  function onFileChange(e) {
+    file.value = e.target.files[0]
+    coverUrl.value = URL.createObjectURL(file.valeu)
+  }
+
 
 </script>
 
@@ -36,7 +42,7 @@ import ingredienteService from '@/services/estoques.js'
 <template>
     <div class="container">
       <div class="fotinhas">
-        <div class="fotoes">foto aqui</div>
+        <div class="fotoes"><img ></div>
         <input type="text" v-model="(props.ingrediente.nome)">
         <input type="text" v-model="(props.ingrediente.descricao)">
         <input type="text" v-model="(props.ingrediente.preco)">
