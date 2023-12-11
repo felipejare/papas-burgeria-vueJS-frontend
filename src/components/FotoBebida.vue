@@ -35,7 +35,9 @@ const props = defineProps({
 <template>
     <div class="container">
       <div class="fotinhas">
-        <div class="fotoes">foto aqui</div>
+        <div class="fotoes">
+          <img class="minimagem" v-bind:src="bebida.imagem.url" />
+        </div>
         <input type="text" v-model="(props.bebida.nome)">
         <input type="text" v-model="(props.bebida.tipo)">
         <input type="text" v-model="(props.bebida.descricao)" >
@@ -47,6 +49,10 @@ const props = defineProps({
   
 
   <style scoped>
+  .minimagem{
+    width: 100%;
+    aspect-ratio: 4/3.2;
+  }
   .container {
     display: flex;
     flex-direction: column;
@@ -63,6 +69,7 @@ const props = defineProps({
    margin: 5%;
    width: 90%;
    height: 70%;
+   
   }
   .fotinhas input{
     margin-left: 2%;

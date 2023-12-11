@@ -9,9 +9,12 @@ import { RouterLink } from 'vue-router'
     <div class="divCenter">
       <h2>Bem vindo fulano de tal | Pronto para o trabalho? c: </h2>
       <CalendarioBlock />
-      <button class="button-64" role="button"><span class="text">Ir para Lucros  -></span></button>
-      <button class="button-64" role="button"><span class="text">Ir para Caixa  -></span></button>
-      <button class="button-64" role="button"><span class="text">Ir para Estoque -></span></button>
+      <div class="divisoes">
+        <RouterLink to="/estoque"><button class="button-64" role="button"><span class="text">Ir para Estoque</span></button></RouterLink>
+        <RouterLink to="/caixa"><button class="button-64" role="button"><span class="text">Ir para Caixa</span></button></RouterLink>
+        
+      </div>
+
 
 
     </div>
@@ -22,6 +25,10 @@ import { RouterLink } from 'vue-router'
   background-color: white;
   width: 100%;
   height: 100%;
+}
+.divisoes, RouterLink {
+  display: flex;
+  margin-left: 30%;
 }
 .divCenter {
   width: 75%;
